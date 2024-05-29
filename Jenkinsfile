@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh 'docker --version' // Verify Docker is available
+                // sh 'docker --version' // Verify Docker is available
                 sh 'docker build -t saip/my-python-app:latest .'
             }
         }
