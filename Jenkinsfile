@@ -16,11 +16,11 @@ pipeline {
                 }
             }
         }
-        stage('Deploy') {  // Renamed for clarity
+        stage('Deploy') {  
             steps {
                 script {
                     // Simulate deployment (e.g., copying build artifacts)
-                    sh 'cp -r build/ artifacts/'  // Replace paths if needed
+                    echo "Simulating deployment of artifacts..."
                 }
             }
         }
