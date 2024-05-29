@@ -18,11 +18,12 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                script {
-                    sh 'docker build -t yourusername/my-python-app:latest .'
-                }
+                sh 'docker --version' // Verify Docker is available
+                sh 'docker build -t yourusername/my-python-app:latest .'
             }
         }
+    }  
+        
     }
     post {
         always {
